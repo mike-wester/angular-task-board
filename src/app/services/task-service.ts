@@ -10,24 +10,24 @@ export class TaskService {
   protected taskList: TaskInfo[] = [
     {
       taskId: 0,
-      name: 'Complete Task Board Application',
-      desc: 'Complete the total efforts to fully refine and implement the new Angular Task Board'
+      name: 'Complete Task Board Application - Initilization',
+      desc: 'Complete the total efforts to fully refine and implement the new Angular Task Board based off of the v22 Homes tutorial'
     },{
-      taskId: 0,
-      name: 'Complete Task Board Application',
-      desc: 'Complete the total efforts to fully refine and implement the new Angular Task Board'
+      taskId: 1,
+      name: 'Complete Task Board Application - Infastructure',
+      desc: 'Setup basic infastructure'
     },{
-      taskId: 0,
-      name: 'Complete Task Board Application',
-      desc: 'Complete the total efforts to fully refine and implement the new Angular Task Board'
+      taskId: 2,
+      name: 'Complete Task Board Application - Redesign',
+      desc: 'Redesign Task Layout and Header'
     },{
-      taskId: 0,
-      name: 'Complete Task Board Application',
-      desc: 'Complete the total efforts to fully refine and implement the new Angular Task Board'
+      taskId: 3,
+      name: 'Complete Task Board Application - HTTP Addition',
+      desc: 'Update Service to correctly use HTTP requests instead of hard coded'
     },{
-      taskId: 0,
-      name: 'Complete Task Board Application',
-      desc: 'Complete the total efforts to fully refine and implement the new Angular Task Board'
+      taskId: 4,
+      name: 'Complete Task Board Application - Create more tasks',
+      desc: 'Update Repo with more Tasks to do and what broadly defines a task'
     },
   ];
 
