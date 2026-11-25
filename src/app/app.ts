@@ -1,10 +1,9 @@
 import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
 
-import { TaskBoard } from './task-board/task-board'
+import { TaskBoard } from './components/task-board/task-board'
 
 @Component({
-  imports: [RouterOutlet, TaskBoard],
+  imports: [TaskBoard],
   selector: 'app-root',
   styleUrl: './app.less',
   templateUrl: './app.html',
