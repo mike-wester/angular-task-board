@@ -1,4 +1,5 @@
 import { Component, signal } from '@angular/core';
+import {RouterLink, RouterOutlet} from '@angular/router';
 
 import { TaskBoard } from './components/task-board/task-board'
 
