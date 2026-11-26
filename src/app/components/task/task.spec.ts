@@ -1,21 +1,21 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { Task } from './task';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
+import {Task} from './task';
 
 describe('Task', () => {
-  let component: Task;
-  let fixture: ComponentFixture<Task>;
+    let component: Task;
+    let fixture: ComponentFixture<Task>;
 
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      imports: [Task],
-    }).compileComponents();
+    beforeEach(async () => {
+        await TestBed.configureTestingModule({
+            imports: [Task],
+        }).compileComponents();
 
-    fixture = TestBed.createComponent(Task);
-    component = fixture.componentInstance;
-    await fixture.whenStable();
-  });
+        fixture = TestBed.createComponent(Task);
+        component = fixture.componentInstance;
+        await fixture.whenStable();
+    });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
+    it('should create', () => {
+        expect(component).toBeTruthy();
+    });
 });

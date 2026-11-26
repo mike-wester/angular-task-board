@@ -1,14 +1,14 @@
-import { Component, signal } from '@angular/core';
+import {Component, signal} from '@angular/core';
 import {RouterLink, RouterOutlet} from '@angular/router';
 
-import { TaskBoard } from './components/task-board/task-board'
+import {TaskBoard} from './components/task-board/task-board';
 
 @Component({
-  imports: [TaskBoard],
-  selector: 'app-root',
-  styleUrl: './app.less',
-  templateUrl: './app.html',
+    imports: [TaskBoard],
+    selector: 'app-root',
+    styleUrl: './app.less',
+    templateUrl: './app.html',
 })
 export class App {
-  protected readonly title = signal('angular-taskboard');
+    protected readonly title = signal('angular-taskboard');
 }

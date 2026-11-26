@@ -1,41 +1,18 @@
-import { Service} from '@angular/core';
-import { TaskInfo } from '../interfaces/task-info';
-
+import {Service} from '@angular/core';
+import {TaskInfo} from '../interfaces/task-info';
 
 @Service()
 export class TaskService {
-    
-  readonly baseUrl = 'https://angular.dev/assets/images/tutorials/common';
+    public url: string = 'http://localhost:3000/tasks';
 
-  protected taskList: TaskInfo[] = [
-    {
-      taskId: 0,
-      name: 'Complete Task Board Application - Initilization',
-      desc: 'Complete the total efforts to fully refine and implement the new Angular Task Board based off of the v22 Homes tutorial'
-    },{
-      taskId: 1,
-      name: 'Complete Task Board Application - Infastructure',
-      desc: 'Setup basic infastructure'
-    },{
-      taskId: 2,
-      name: 'Complete Task Board Application - Redesign',
-      desc: 'Redesign Task Layout and Header'
-    },{
-      taskId: 3,
-      name: 'Complete Task Board Application - HTTP Addition',
-      desc: 'Update Service to correctly use HTTP requests instead of hard coded'
-    },{
-      taskId: 4,
-      name: 'Complete Task Board Application - Create more tasks',
-      desc: 'Update Repo with more Tasks to do and what broadly defines a task'
-    },
-  ];
+    public async getAllTasks(): Promise<TaskInfo[]> {
+        const data = await fetch(this.url);
+        return (await data.json()) ?? [];
+    }
 
-  getAllTasks(): TaskInfo[] {
-    return this.taskList;
-  }
-
-  getTaskInfoById(taskId: number): TaskInfo | undefined {
-    return this.taskList.find((task) => task.taskId === taskId);
-  }
+    public async getTaskInfoById(id: number): Promise<TaskInfo | undefined> {
+        const data = await fetch(`${this.url}/${id}`);
+        const locationJson = await data.json();
+        return locationJson ?? {};
+    }
 }

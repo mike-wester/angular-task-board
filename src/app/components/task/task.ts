@@ -1,13 +1,14 @@
-import { Component, input } from '@angular/core';
+import {Component, input} from '@angular/core';
+import {RouterLink} from '@angular/router';
 
-import { TaskInfo } from '../../interfaces/task-info';
+import {TaskInfo} from '../../interfaces/task-info';
 
 @Component({
-  imports: [],
-  selector: 'app-task',
-  styleUrl: './task.less',
-  templateUrl: './task.html',
+    imports: [RouterLink],
+    selector: 'app-task',
+    styleUrl: './task.less',
+    templateUrl: './task.html',
 })
 export class Task {
-  task = input.required<TaskInfo>();
+    task = input.required<TaskInfo>();
 }
