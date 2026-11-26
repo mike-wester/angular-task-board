@@ -28,6 +28,11 @@
                             {
                                 "glob": "**/*",
                                 "input": "public"
+                            },
+                            {
+                                "glob": "logo.svg",
+                                "input": "src/public",
+                                "output": "public"
                             }
                         ],
                         "styles": ["src/styles.less"]

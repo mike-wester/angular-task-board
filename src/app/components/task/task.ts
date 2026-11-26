@@ -1,7 +1,7 @@
-import {Component, input} from '@angular/core';
-import {RouterLink} from '@angular/router';
+import { Component, input } from '@angular/core';
+import { RouterLink } from '@angular/router';
 
-import {TaskInfo} from '../../interfaces/task-info';
+import { TaskInfo } from '../../interfaces/task-info';
 
 @Component({
     imports: [RouterLink],
@@ -10,5 +10,5 @@ import {TaskInfo} from '../../interfaces/task-info';
     templateUrl: './task.html',
 })
 export class Task {
-    task = input.required<TaskInfo>();
+    public task = input.required<TaskInfo>();
 }

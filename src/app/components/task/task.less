@@ -9,20 +9,26 @@
     padding: 10px 20px 0 20px;
 }
 
-.task-name {
-    color: var(--primary-color);
-    padding: 10px 20px 0 20px;
-}
-
+.task-name,
 .task-desc {
     color: var(--secondary-color);
-    padding: 10px 20px 0 20px;
+    padding: 10px 20px 10px 20px;
+
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 section.task a {
     padding-left: 20px;
     text-decoration: none;
     color: var(--primary-color);
+    hover {
+        text-decoration: underline;
+        cursor: pointer;
+    }
 }
 section.task a::after {
     content: '\203A';
