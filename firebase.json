@@ -1,0 +1,15 @@
+{
+    "dataconnect": {
+        "source": "dataconnect"
+    },
+    "hosting": {
+        "public": "dist/angular-taskboard/browser",
+        "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+        "rewrites": [
+            {
+                "source": "**",
+                "destination": "/index.html"
+            }
+        ]
+    }
+}
