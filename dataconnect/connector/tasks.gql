@@ -1,0 +1,15 @@
+query GetTasks @auth(level: PUBLIC, insecureReason: "The task board is publicly readable.") {
+  tasks(orderBy: { taskId: ASC }) {
+    taskId
+    name
+    desc
+  }
+}
+
+query GetTaskById($taskId: Int!) @auth(level: PUBLIC, insecureReason: "The task board is publicly readable.") {
+  task(key: { taskId: $taskId }) {
+    taskId
+    name
+    desc
+  }
+}

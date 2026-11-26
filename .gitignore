@@ -33,6 +33,9 @@ yarn-error.log
 /.angular/cache
 .sass-cache/
 /connect.lock
+/dataconnect/.dataconnect/
+/dataconnect-debug.log
+/pglite-debug.log
 /coverage
 /libpeerconnection.log
 testem.log

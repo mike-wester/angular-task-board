@@ -1,10 +1,20 @@
-import {TestBed} from '@angular/core/testing';
-import {App} from './app';
+import { TestBed } from '@angular/core/testing';
+import { App } from './app';
+import { TaskService } from './services/task-service';
 
 describe('App', () => {
     beforeEach(async () => {
         await TestBed.configureTestingModule({
             imports: [App],
+            providers: [
+                {
+                    provide: TaskService,
+                    useValue: {
+                        getAllTasks: async () => [],
+                        getTaskInfoById: async () => undefined,
+                    },
+                },
+            ],
         }).compileComponents();
     });
 

@@ -1,0 +1,5 @@
+type Task @table(key: "taskId") {
+    taskId: Int! @col(dataType: "serial")
+    name: String!
+    desc: String
+}

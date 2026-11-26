@@ -1,0 +1,6 @@
+connectorId: taskboard
+generate:
+  javascriptSdk:
+    outputDir: "../../src/app/dataconnect-generated"
+    package: "@dataconnect/generated"
+    packageJsonDir: "../.."
