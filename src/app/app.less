@@ -1,16 +1,26 @@
 :host {
     --content-padding: 10px;
+    display: flex;
+    min-height: 100vh;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 100vh;
 }
 
 header {
     display: flex;
     height: 200px;
     width: 100%;
-    padding: 0px 10px 40px 40px;
+    padding: 0px 10px 10px 40px;
     box-shadow: 0px 5px 25px var(--shadow-color);
 }
 
 .content {
+    flex: 1;
     padding: var(--content-padding);
 }
 
@@ -32,4 +42,73 @@ header {
 
 .brand-text {
     padding: 120px 10px 40px 40px;
+}
+
+.footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.5rem 1rem;
+    padding: 1rem;
+}
+
+p {
+    padding: 10px 40px;
+}
+
+.copyright {
+    flex: 1 1 200px;
+    text-align: left;
+
+    p {
+        margin: 0;
+        color: #000;
+    }
+}
+
+.social {
+    flex: 1 1 300px;
+    text-align: right;
+
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 0 0.25rem;
+        margin: 0;
+        padding: 0;
+    }
+
+    li {
+        display: inline-block;
+        font-size: 1.25em;
+        list-style: none;
+    }
+
+    a {
+        display: block;
+        color: var(--primary-color);
+        padding: 10px;
+
+        &:hover {
+            color: red;
+        }
+    }
+
+    .codewars-img {
+        width: 17.16px;
+        height: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    .social {
+        text-align: left;
+
+        ul {
+            justify-content: flex-start;
+        }
+    }
 }
