@@ -1,12 +1,13 @@
 specVersion: "v1"
-serviceId: angular-taskboard
-location: us-central1
-schema:
-  source: "./schema"
-  datasource:
-    postgresql:
-      database: taskboard
-      cloudSql:
-        instanceId: taskboard
-connectorDirs:
-  - "./connector"
+serviceId: "angular-taskboard"
+location: "us-east4"
+schemas:
+  - source: "./schema"
+    datasource:
+      postgresql:
+        database: "fdcdb"
+        cloudSql:
+          instanceId: "angular-taskboard-fdc"
+          # schemaValidation: "STRICT"     # STRICT mode makes Postgres schema match Data Connect exactly.
+          # schemaValidation: "COMPATIBLE" # COMPATIBLE mode makes Postgres schema compatible with Data Connect.
+connectorDirs: ["./example"]
