@@ -1,0 +1,32 @@
+I1126 13:51:40.658936   51673 load.go:31] Reloading schema and connectors...
+I1126 13:51:40.668642   51673 control.go:113] [projects/emulator/locations/emulator/services/angular-taskboard 1179] UpdateResources(): done
+Main schema: sources: schema/schema.gql [1992B] 
+Connector "example": sources: example/mutations.gql [1243B] example/queries.gql [1801B] 
+I1126 13:51:40.680670   51673 codegen.go:102] [connector "example" javascriptSdk] Generating sources into "/Users/mikewester/dev/angular-taskboard/src/dataconnect-generated"
+I1126 13:51:40.689215   51673 collector.go:107] schema extensions wrote into "/Users/mikewester/dev/angular-taskboard/dataconnect/.dataconnect/schema"
+Generated sources: main/implicit.gql [1261B] main/input.gql [29309B] main/relation.gql [14318B] main/query.gql [5099B] main/mutation.gql [13679B] prelude.gql [94538B] 
+I1126 13:51:40.690839   51673 collector.go:107] connector "example" javascriptSdk wrote into "/Users/mikewester/dev/angular-taskboard/src/dataconnect-generated"
+Generated sources: angular/README.md [49462B] .guides/setup.md [1631B] index.d.ts [8408B] package.json [865B] angular/index.d.ts [3618B] angular/esm/package.json [17B] index.cjs.js [5904B] README.md [41223B] esm/index.esm.js [5360B] angular/package.json [653B] angular/index.cjs.js [3379B] angular/esm/index.esm.js [3172B] .guides/config.json [236B] esm/package.json [17B] .guides/usage.md [3460B] 
+I1126 13:51:40.692175   51673 installsdk.go:55] Package @dataconnect/generated is already installed. Skipping installation
+I1126 13:51:40.692198   51673 load.go:109] Finished reloading
+I1126 13:51:40.693155   51673 dev.go:103] Listening on address (HTTP + gRPC): 127.0.0.1:9399
+I1126 13:51:40.693370   51673 dev.go:103] Listening on address (HTTP + gRPC): [::1]:9399
+I1126 13:51:43.746716   51673 migrate.go:24] Running migration SQL:
+Step 1: CREATE EXTENSION IF NOT EXISTS "uuid-ossp"
+Step 2: CREATE TABLE "public"."movie" ("id" uuid NOT NULL DEFAULT uuid_generate_v4(), "genre" text NULL, "image_url" text NOT NULL, "title" text NOT NULL, PRIMARY KEY ("id"))
+Step 3: CREATE TABLE "public"."user" ("id" text NOT NULL, "username" character varying(50) NOT NULL, PRIMARY KEY ("id"))
+Step 4: CREATE TABLE "public"."Reviews" ("movie_id" uuid NOT NULL, "user_id" text NOT NULL, "rating" integer NULL, "review_date" date NOT NULL, "review_text" text NULL, PRIMARY KEY ("movie_id", "user_id"), CONSTRAINT "Reviews_movie_id_fkey" FOREIGN KEY ("movie_id") REFERENCES "public"."movie" ("id") ON DELETE CASCADE, CONSTRAINT "Reviews_user_id_fkey" FOREIGN KEY ("user_id") REFERENCES "public"."user" ("id") ON DELETE CASCADE)
+Step 5: CREATE INDEX "Reviews_movieId_idx" ON "public"."Reviews" ("movie_id")
+Step 6: CREATE INDEX "Reviews_userId_idx" ON "public"."Reviews" ("user_id")
+Step 7: CREATE TABLE "public"."movie_metadata" ("id" uuid NOT NULL DEFAULT uuid_generate_v4(), "movie_id" uuid NOT NULL, "description" text NULL, "rating" double precision NULL, "release_year" integer NULL, PRIMARY KEY ("id"), CONSTRAINT "movie_metadata_movie_id_fkey" FOREIGN KEY ("movie_id") REFERENCES "public"."movie" ("id") ON DELETE CASCADE)
+Step 8: CREATE INDEX "movie_metadata_movieId_idx" ON "public"."movie_metadata" ("movie_id")
+Step 9: CREATE UNIQUE INDEX "movie_metadata_movieId_uidx" ON "public"."movie_metadata" ("movie_id")
+I1126 13:51:43.796504   51673 control.go:113] [projects/emulator/locations/emulator/services/angular-taskboard 93f3] UpdateResources(): done
+Main schema: sources: schema/schema.gql [1992B] 
+Connector "example": sources: example/mutations.gql [1243B] example/queries.gql [1801B] 
+I1126 13:51:43.800986   51673 configure_emulator.go:21] ConfigureEmulator successed
+Request: service_id:  "angular-taskboard"
+connection_string:  "postgres://127.0.0.1:5432/fdcdb?sslmode=disable"
+database:  "fdcdb"
+
+Response: 

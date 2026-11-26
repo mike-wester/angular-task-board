@@ -18,12 +18,14 @@
         "@angular/forms": "^22.3.0",
         "@angular/platform-browser": "^22.3.0",
         "@angular/router": "^22.3.0",
+        "@dataconnect/generated": "file:src/dataconnect-generated",
         "@fortawesome/angular-fontawesome": "^5.1.0",
         "@fortawesome/free-brands-svg-icons": "^7.3.1",
         "@fortawesome/free-solid-svg-icons": "^7.3.0",
         "@ng-bootstrap/ng-bootstrap": "^21.0.0",
         "@popperjs/core": "^2.11.8",
         "bootstrap": "^5.3.8",
+        "firebase": "^13.4.0",
         "rxjs": "~7.8.0",
         "tslib": "^2.3.0",
         "zone.js": "^0.16.3"
@@ -56,6 +58,8 @@
         "esbuild@0.28.2": true,
         "fsevents@2.3.3": true,
         "lmdb@3.5.9": true,
-        "msgpackr-extract@3.0.7": true
+        "msgpackr-extract@3.0.7": true,
+        "@firebase/util@1.15.3": true,
+        "protobufjs@7.6.6": true
     }
 }
